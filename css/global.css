@@ -7,6 +7,7 @@ a,p,li,b, h1,h2,h3,h4,h5,h6{
 }
 body{
 	height:100%;
+	position:relative;
 }
 .container-fluid{
 	height:100%;
@@ -46,7 +47,35 @@ body{
 	text-align:left;
 	list-style-type: none;
 }
-#menuAffix h3{
+.nav li.active a h3{
+	color:black;
+}
+.nav li.active a h3{
+	border-bottom: 2px solid black;
+	font-weight: 800;
+}
+.nav li.active a h3:before{
+	margin-left:-15px;
+	margin-right:5px;
+	content:"";
+	display:inline-block;
+	height:20px;
+	width:10px;
+	background-color: black;
+}
+.nav li:hover a h3:before{
+	margin-left:-15px;
+	margin-right:5px;
+	content:"";
+	display:inline-block;
+	width:10px;
+	height:20px;
+	background-color: black;
+}
+.nav li:hover a{
+	background-color:white;
+}
+.nav li a h3{
 	color:black;
 }
 .mainframe{
