@@ -1,0 +1,57 @@
+.food-blog-container{
+	padding-right:10px;
+}
+#food-blog-left{
+	border: 3px solid white;
+	padding:0px;
+	margin-right:10px;
+}
+#food-blog-left-img{
+	border-bottom:3px solid white;
+	width:100%;
+}
+.food-blog-text-box{
+	padding:10px;
+	padding-top:0px;
+}
+.food-blog-title{
+	margin-top:10px;
+	color:yellow;
+	margin-bottom:0px;
+}
+.food-blog-description-box{
+	margin-top:0px;
+	max-height:200px;
+	overflow: hidden;
+}
+.food-blog-description{
+	color:white;
+	text-overflow:ellipsis;
+	display: block;
+	
+}
+.food-blog-read-more-box
+{
+	text-align:right;
+	width:100%;	
+}
+.food-blog-read-more-text{
+	color:white;
+	margin-right:10px;
+	margin-top:0px;
+}
+#food-blog-right{
+}
+#food-blog-right-top{
+	border:3px solid white;
+	height:540px;
+}
+#food-blog-right-top-img{
+	width:100%;
+	height:300px;
+	border-bottom: 3px solid white;
+}
+#food-blog-description-right-box{
+	max-height:140px;
+	overflow: hidden;
+}
