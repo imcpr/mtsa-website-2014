@@ -1,0 +1,44 @@
+#contact-left{
+	height:500px;
+	text-align:left;
+}
+#contact-right{
+	height:500px;
+}
+#contact-left h1{
+	color:#DEC024;
+	
+	width:100%;
+	display:block;
+	margin:0px;
+	font-size:60pt;
+    font-family: 'Lato';
+    font-weight:800;
+    padding:0px;
+}
+#contact-left h3{
+	color:white;
+	font-size:30px;
+}
+#contact-social-media{
+	padding-top:20px;
+	padding-right:20px;
+}
+#contact-social-media .col-md-6{
+	border:3px solid white;
+	height:300px;
+}
+#contact-facebook{
+	margin-right:20px;
+	margin-bottom:20px;
+}
+#contact-instagram{
+	margin-right:-20px;
+	margin-bottom:20px;
+}
+#contact-youtube{
+	margin-right:20px;
+}
+#contact-twitter{
+	margin-right:-20px;
+}

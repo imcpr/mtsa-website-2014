@@ -1,0 +1,36 @@
+.house-main{
+	padding-right: 10px;
+}
+#house-photo{
+	border: 3px solid white;
+	height:400px;
+	margin-right: 10px;
+}
+#house-intro{
+	border:3px solid white;
+	height:400px;
+	margin-right:-10px;
+}
+.house-col{
+	padding:5px !important;
+}
+.house-logo{
+	width:100%;
+}
+.house-description{
+	border:3px solid white;
+	height:300px;
+}
+.house-col-bottom{
+	border:3px solid white;
+	border-top:none;
+	text-align:center;
+	line-height:30px;
+}
+.house-col-bottom p{
+	display:block;
+	margin-top:auto;
+	margin-bottom:auto;
+	color:white;
+	font-size:larger;
+}

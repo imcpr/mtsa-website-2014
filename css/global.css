@@ -4,6 +4,9 @@ div, .row{
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
+img{
+	width:100%:
+}
 html{
 	height:100%;
 }
@@ -99,6 +102,7 @@ body{
 	padding:0px;
 	text-align:center;
   	position: relative;
+  	margin-bottom:120px;
 }
 .align-left{
 	text-align:left;
@@ -126,10 +130,9 @@ body{
 .events-box-container{
 	width:100%;
 	padding-right:10px;
-	padding-bottom:60px;
 }
 .events-box{
-	border: 3px solid white;
+	border: 3px solid #DEC024;
 	height:350px;
 	margin-top:15px;
 	margin-right:10px;
