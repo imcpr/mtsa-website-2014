@@ -21,13 +21,14 @@
 }
 .food-blog-description-box{
 	margin-top:0px;
-	max-height:200px;
+	max-height:350px;
 	overflow: hidden;
 }
-.food-blog-description{
+.food-blog-description-box p{
 	color:white;
 	text-overflow:ellipsis;
 	display: block;
+	font-size:larger;
 	
 }
 .food-blog-read-more-box
@@ -44,7 +45,7 @@
 }
 #food-blog-right-top{
 	border:3px solid white;
-	height:540px;
+	height:500px;
 }
 #food-blog-right-top-img{
 	width:100%;
@@ -55,6 +56,12 @@
 	max-height:140px;
 	overflow: hidden;
 }
+#food-blog-description-right-box p{
+	color:white;
+	text-overflow:ellipsis;
+	display: block;
+	font-size:larger;
+}
 .food-blog-right-bottom-box{
 	padding-right:10px;
 }
@@ -63,11 +70,12 @@
 	border: 3px solid white;
 	margin-top:20px;
 	margin-right:10px;
-	
+	padding:15px !important;
 }
 .food-blog-right-bottom-box2{
 	height:300px;
 	border: 3px solid white;
 	margin-top:20px;
 	margin-right:-10px;
+	padding:15px !important;
 }

@@ -16,6 +16,10 @@
     	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<body data-spy="scroll" data-target="#menu-holder">
+		<!-- get wordpress -->
+		<?php
+		require('../food/wp-blog-header.php');
+		?>
 		<!-- main mofo container -->
 		<div class="container-fluid">
 			<div class="row"  id="events">
@@ -40,21 +44,43 @@
 					<div class="align-left row">
 						<div class="col-md-offset-1 col-md-10 col-md-offset-1">
 							<h1 class="big-white-h1">EVENTS</h1>
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<div id="myCarousel" class="carousel slide" data-interval='false' data-ride="carousel">
 							  <!-- Indicators -->
 								<ol class="carousel-indicators">
-									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-									<!--
-									<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							    	<li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel" data-slide-to="1"></li>
+							    	<li data-target="#myCarousel" data-slide-to="2"></li> 
+							    	<li data-target="#myCarousel" data-slide-to="3"></li> 
 							  	</ol>
 							  <!-- Wrapper for slides -->
 							  	<div class="carousel-inner">
-							    	<div class="item active">
-							      		<img src="images/main.jpg" alt="">
-							      		<div class="carousel-caption">
-							      		</div>
-							    	</div>
+							  		<?php $my_query = new WP_Query('category_name=Events&showposts=4'); ?>
+									<?php $eventcount = 1; ?>
+									<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+									<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
+									<?php if ($eventcount==1): ?>
+										<div class="item active">
+							      			<img src="<?php echo $url; ?>" alt="">
+							      			<div class="carousel-caption">
+							      				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+							      					<h1><?php the_title(); ?></h1>
+												</a>
+							      			</div>
+							    		</div>
+							    	<?php $eventcount ++; ?>
+									<?php elseif( $eventcount > 1): ?>
+										<div class="item">
+							      			<img src="<?php echo $url; ?>" alt="">
+							      			<div class="carousel-caption">
+							      				<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+							      					<h1><?php the_title(); ?></h1>
+												</a>
+							      			</div>
+							    		</div>
+							    	<?php $eventcount ++; ?>
+									<?php endif; ?>
+									<?php endwhile; ?>
+								    
 							    	<!-- 
 							    	<div class="item">
 							      		<img src="..." alt="...">
@@ -65,10 +91,10 @@
 							  	</div>
 							
 							  	<!-- Controls -->
-							  	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							  	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 							    	<span class="glyphicon glyphicon-chevron-left"></span>
 							  	</a>
-							  	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							  	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
 							    	<span class="glyphicon glyphicon-chevron-right"></span>
 							  	</a>
 							</div>
@@ -94,37 +120,55 @@
 							<h1 class="big-white-h1 col-md-offset-1 col-md-11">FOOD BLOG</h1>
 						</div>
 						<div class="row food-blog-container">
+							<?php $my_query = new WP_Query('category_name=FoodBlog&showposts=3'); ?>
+							<?php $i = 1; ?>
+							<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
+							<?php if($i==1): ?>
 							<div id="food-blog-left" class="col-md-offset-1 col-md-5">
-								<img id="food-blog-left-img" src="images/food-blog.jpg">
+								
+								<a href="<?php the_permalink(); ?>"><img id="food-blog-left-img" src="<?php echo $url ?>"></a>
 								<div class="food-blog-text-box">
-									<h2 class="food-blog-title">Nocochihihi</h2>
+									<a href="<?php the_permalink(); ?>"><h2 class="food-blog-title"><?php the_title(); ?></h2></a>
 									<div class="food-blog-description-box">
-										<p class="food-blog-description">oofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewf</p>
+										<?php the_content(); ?>
 									</div>
 								</div>
 								<div class="food-blog-read-more-box">
-									<h3 class="food-blog-read-more-text">READ MORE</h3>
+									<a href="<?php the_permalink(); ?>"><h3 class="food-blog-read-more-text">READ MORE</h3></a>
 								</div>
-							</div>
-							<div id="food-blog-right" class="col-md-5">
+							</div><div id="food-blog-right" class="col-md-5">
+							<?php $i++; ?>
+							<?php elseif($i == 2): ?>
+								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
 								<div id="food-blog-right-top">
-									<img id="food-blog-right-top-img" src="images/food-blog-test.jpg">
+									<a href="<?php the_permalink(); ?>"><img id="food-blog-right-top-img" src="<?php echo $url ?>"></a>
 									<div class="food-blog-text-box">
 										
-										<h2 class="food-blog-title">Nocochihihi</h2>
+										<a href="<?php the_permalink(); ?>"><h2 class="food-blog-title"><?php the_title(); ?></h2></a>
 										<div id="food-blog-description-right-box">
-											<p class="food-blog-description">oofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweoofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewfofhoefhoweij ofjwoejfw efewfwefwefwefwefewfewf</p>
+											<?php the_excerpt(); ?>
 										</div>
 									</div>
 									<div class="food-blog-read-more-box">
-										<h3 class="food-blog-read-more-text">READ MORE</h3>
+										<a href="<?php the_permalink(); ?>"><h3 class="food-blog-read-more-text">READ MORE</h3></a>
 									</div>
 								</div>
-								<div class="row food-blog-right-bottom-box">
-									<div class="col-md-6 food-blog-right-bottom-box1"></div>
-									<div class="col-md-6 food-blog-right-bottom-box2"></div>
+							<?php $i++; ?>
+							<?php elseif($i==3): ?><div class="row food-blog-right-bottom-box">
+							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
+									<div class="col-md-6 food-blog-right-bottom-box1" background="<?php echo $url ?>">
+										<a href="<?php the_permalink(); ?>"><h2 class="food-blog-title"><?php the_title(); ?></h2></a>
+									</div>
+									<div class="col-md-6 food-blog-right-bottom-box2">
+										<a href="http://mtsa.tw/food"><h2 class="food-blog-title">CLICK HERE TO READ MORE</h2></a>
+									</div>
 								</div>
 							</div>
+							<?php endif; ?>
+							<?php endwhile; ?>
+								
+								
 						</div>
 						
 					</div>
