@@ -15,6 +15,7 @@
     	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/smoothscroll.js"></script>
+	</head>
 	<body data-spy="scroll" data-target="#menu-holder">
 		<!-- get wordpress -->
 		<?php
@@ -26,7 +27,7 @@
 				<!-- left side menu bar -->
 				<div class="col-md-2" id="leftFrame">
 					<div id="fixedMenuBar">
-						<img id="mtsa-logo" src="images/logo.png">
+						<a id="logoholder" href="http://mtsa.tw/newSite2014"><img id="mtsa-logo" src="http://mtsa.tw/newSite2014/images/logo.png"></a>
 						<div id="menu-holder">
 							<ul class="nav" id="menuAffix">
 								<li><a href="#events" class="smoothScroll"><h3>EVENTS</h3></a></li>
@@ -105,9 +106,9 @@
 						<div class="col-md-offset-1 col-md-5 events-box">
 							
 						</div>
-						<div class="col-md-5 events-box">
-							
-						</div>
+						<a href="https://www.facebook.com/mcgill.mtsa"><div class="col-md-5" id="facebook">
+							<h2>FIND US ON FACEBOOK</h2>
+						</div></a>
 					</div>
 					
 				</div>
@@ -193,7 +194,8 @@
 								<div class="col-md-3 house-col">
 									<img class="house-logo" src="images/houses/wolfpack.png">
 									<div class="house-description">
-										
+										<h3 class="house-name">WolfPack</h3>
+										<p>As defined by Yahoo! Answers, Wolves are known to be affectionate, playful, and loyal. This is what the Wolfpack Famry is all about. We value friendship, open-mindedness, and sharing. Our main goal is to share a small amount of happiness errday to all our family members! Hosting chill, indoor activities, such as KTV, themed potlucks, restrautant crawl, study parties, and movie nights, we're all about dose down-to-earth vibes when bonding with our members! </p>
 									</div>
 									<div class="row">
 										<div class="col-md-6 house-col-bottom">
@@ -207,7 +209,8 @@
 								<div class="col-md-3 house-col">
 									<img class="house-logo" src="images/houses/bomb.png">
 									<div class="house-description">
-										
+										<h3 class="house-name">Bombdiggity</h3>
+										<p>Bombdiggity is a spirited team of CREATIVE, SASSY individuals who can charm their way into anything. With great dreams, great pride, and amazing talents, we are not afraid to take down whatever stands in our way. Join this family and we guarantee that you will have the best time at McGill! #HouseBombdiggity</p>
 									</div>
 									<div class="row">
 										<div class="col-md-6 house-col-bottom">
@@ -221,7 +224,8 @@
 								<div class="col-md-3 house-col">
 									<img class="house-logo" src="images/houses/soloyolo.png">
 									<div class="house-description">
-										
+										<h3 class="house-name">Solo-Yolo</h3>
+										<p>Solo Yolo is centered towards being the most energetic and original amongst them all. Creativity is our instrument, curiosity is our fuel and family is our glue. We have the greatest passion towards living life at its greatest #YOLO while working our individual uniqueness #SOLO. We drink bubble tea non-stop during the day and later on mix in shots going into and throughout the night. Join us on an adventure of a lifetime! #HouseSoloYolo</p>
 									</div>
 									<div class="row">
 										<div class="col-md-6 house-col-bottom">
@@ -235,7 +239,8 @@
 								<div class="col-md-3 house-col">
 									<img class="house-logo" src="images/houses/shark.png">
 									<div class="house-description">
-										
+										<h3 class="house-name">Sharknado</h3>
+										<p>Team Sharknado is easygoing, and we believe in bonding through casual occasions. Our main goal is to keep calm and stay chill. Therefore, the activities we prefer are laid-back movie nights, potlucks, and chilling. We believe non-pressured environments make the best bonds within a group! #HouseSharknado</p>
 									</div>
 									<div class="row">
 										<div class="col-md-6 house-col-bottom">
@@ -278,8 +283,12 @@
 						<div class="col-md-offset-1 col-md-10 col-md-offset-1">
 							<img id="team-photo" src="images/main.jpg">
 							<div class="row team-box">
-								<div class="col-md-6 team-box1"></div>
-								<div class="col-md-6 team-box2"></div>
+								<div class="col-md-6 team-box1 yellow-box">
+									<h1 class="big-yellow-font">OUR TEAM</h1>
+								</div>
+								<div class="col-md-6 team-box2 yellow-box">
+									<h1 class="big-yellow-font">JOIN US!</h1>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -20,6 +20,8 @@
 .house-description{
 	border:3px solid white;
 	height:300px;
+	padding:3px;
+	background-color:rgba(0, 0, 0, 0.5);
 }
 .house-col-bottom{
 	border:3px solid white;
@@ -33,4 +35,13 @@
 	margin-bottom:auto;
 	color:white;
 	font-size:larger;
+}
+.house-name{
+	color:yellow;
+	margin:0px;
+	margin-top:5px;
+}
+.house-description p{
+	color:white;
+	overflow:
 }

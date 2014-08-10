@@ -37,6 +37,12 @@ body{
 
 	background-color:white;
 }
+#logoholder{
+	position: fixed;
+	top:0;
+	left:0;
+	width:inherit;
+}
 #mtsa-logo{
 	position: fixed;
 	top:0;
@@ -137,6 +143,19 @@ body{
 	margin-top:15px;
 	margin-right:10px;
 	}
+#facebook{
+	border: 3px solid white;
+	height:350px;
+	margin-top:15px;
+	margin-right:10px;
+	background-color: #3B5998;
+}
+#facebook h2{
+	font-family: 'Lato', sans-serif;
+	color:white;
+	font-weight:bold;
+	line-height:300px;
+}
 
 #bg{
 	position:fixed;
@@ -144,6 +163,21 @@ body{
 	left:0;
 	width:100%;
 	z-index: -5000;
+}
+.big-yellow-font{
+	line-height:150px;
+	color:yellow
+}
+.yellow-box{
+	background-size: 100%;
+    background-image: url('../images/main.jpg');
+    transition: background-position 0.3s;
+	overflow:hidden;
+    background-position: 0 400%;
+    background-repeat:no-repeat;
+}
+.yellow-box:hover{
+    background-position: 0 0;
 }
 .carousel-caption{
 	background: black;
