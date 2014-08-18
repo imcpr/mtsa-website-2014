@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>MTSA</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/global.css" type="text/css">
 		<link rel="stylesheet" href="css/food-blog.css" type="text/css">
 		<link rel="stylesheet" href="css/houses.css" type="text/css">
@@ -25,7 +25,7 @@
 		<div class="container-fluid">
 			<div class="row"  id="events">
 				<!-- left side menu bar -->
-				<div class="col-md-2" id="leftFrame">
+				<div class="col-xs-12 col-md-2" id="leftFrame">
 					<div id="fixedMenuBar">
 						<a id="logoholder" href="http://mtsa.tw/newSite2014"><img id="mtsa-logo" src="http://mtsa.tw/newSite2014/images/logo.png"></a>
 						<div id="menu-holder">
@@ -41,9 +41,9 @@
 					</div>
 				</div>
 				<!-- center container main show -->
-				<div class="col-md-offset-2 col-md-10 mainframe">
+				<div class="col-xs-12 col-md-offset-2 col-md-10 mainframe">
 					<div class="align-left row">
-						<div class="col-md-offset-1 col-md-10 col-md-offset-1">
+						<div class="col-xs-12 col-md-offset-1 col-md-10 col-md-offset-1">
 							<h1 class="big-white-h1">EVENTS</h1>
 							<div id="myCarousel" class="carousel slide" data-interval='false' data-ride="carousel">
 							  <!-- Indicators -->
@@ -103,10 +103,10 @@
 						
 					</div>
 					<div class="row events-box-container">
-						<div class="col-md-offset-1 col-md-5 events-box">
+						<div class="col-xs-6 col-md-offset-1 col-md-5 events-box">
 							
 						</div>
-						<a href="https://www.facebook.com/mcgill.mtsa"><div class="col-md-5" id="facebook">
+						<a href="https://www.facebook.com/mcgill.mtsa"><div class="col-xs-6 col-md-5" id="facebook">
 							<h2>FIND US ON FACEBOOK</h2>
 						</div></a>
 					</div>
@@ -115,7 +115,7 @@
 			</div>
 			<!--end first row -->
 			<div class="row" id="food-blog">
-				<div class="col-md-offset-2 col-md-10 mainframe">
+				<div class="col-xs-12 col-md-offset-2 col-md-10 mainframe">
 					<div class="align-left">
 						<div class="row">
 							<h1 class="big-white-h1 col-md-offset-1 col-md-11">FOOD BLOG</h1>
@@ -126,7 +126,7 @@
 							<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
 							<?php if($i==1): ?>
-							<div id="food-blog-left" class="col-md-offset-1 col-md-5">
+							<div id="food-blog-left" class="col-xs-12 col-md-offset-1 col-md-5">
 								
 								<a href="<?php the_permalink(); ?>"><img id="food-blog-left-img" src="<?php echo $url ?>"></a>
 								<div class="food-blog-text-box">
@@ -138,7 +138,7 @@
 								<div class="food-blog-read-more-box">
 									<a href="<?php the_permalink(); ?>"><h3 class="food-blog-read-more-text">READ MORE</h3></a>
 								</div>
-							</div><div id="food-blog-right" class="col-md-5">
+							</div><div id="food-blog-right" class="col-xs-12 col-md-5">
 							<?php $i++; ?>
 							<?php elseif($i == 2): ?>
 								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
@@ -158,11 +158,11 @@
 							<?php $i++; ?>
 							<?php elseif($i==3): ?><div class="row food-blog-right-bottom-box">
 							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
-									<div class="col-md-6 food-blog-right-bottom-box1" background="<?php echo $url ?>">
+									<div class="col-xs-6 col-md-6 food-blog-right-bottom-box1" background="<?php echo $url ?>">
 										<a href="<?php the_permalink(); ?>"><h2 class="food-blog-title"><?php the_title(); ?></h2></a>
 									</div>
-									<div class="col-md-6 food-blog-right-bottom-box2">
-										<a href="http://mtsa.tw/food"><h2 class="food-blog-title">CLICK HERE TO READ MORE</h2></a>
+									<div class="col-xs-6 col-md-6 food-blog-right-bottom-box2">
+										<a href="http://mtsa.tw/food"><h2 class="food-blog-title">CLICK HERE TO READ MORE AT OUR FOODBLOG HOMEPAGE</h2></a>
 									</div>
 								</div>
 							</div>
@@ -176,12 +176,12 @@
 				</div>
 			</div>
 			<div class="row" id="houses">
-				<div class="col-md-offset-2 col-md-10 mainframe">
+				<div class="col-xs-12 col-md-offset-2 col-md-10 mainframe">
 					<div class="row align-left">
 						<h1 class="big-white-h1 col-md-offset-1 col-md-11">HOUSES</h1>
 					</div>
 					<div class="row">
-						<div class="col-md-offset-1 col-md-10 house-main">
+						<div class="col-xs-12 col-md-offset-1 col-md-10 house-main">
 							<div class="row">
 								<div class="col-md-6" id="house-photo">
 							
@@ -191,7 +191,7 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-3 house-col">
+								<div class="col-xs-6 col-md-3 house-col">
 									<img class="house-logo" src="images/houses/wolfpack.png">
 									<div class="house-description">
 										<h3 class="house-name">WolfPack</h3>
@@ -206,7 +206,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-3 house-col">
+								<div class="col-xs-6 col-md-3 house-col">
 									<img class="house-logo" src="images/houses/bomb.png">
 									<div class="house-description">
 										<h3 class="house-name">Bombdiggity</h3>
@@ -221,7 +221,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-3 house-col">
+								<div class="col-xs-6 col-md-3 house-col">
 									<img class="house-logo" src="images/houses/soloyolo.png">
 									<div class="house-description">
 										<h3 class="house-name">Solo-Yolo</h3>
@@ -236,7 +236,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-3 house-col">
+								<div class="col-xs-6 col-md-3 house-col">
 									<img class="house-logo" src="images/houses/shark.png">
 									<div class="house-description">
 										<h3 class="house-name">Sharknado</h3>
@@ -257,18 +257,17 @@
 				</div>
 			</div>
 			<div class="row" id="sponsors">
-				<div class="col-md-offset-2 col-md-10 mainframe">
+				<div class="col-xs-12 col-md-offset-2 col-md-10 mainframe">
 					<div class="row align-left">
 						<h1 class="big-white-h1 col-md-offset-1 col-md-11">SPONSORS</h1>
 					</div>
 					<div class="row">
-						<div class="col-md-offset-1 col-md-10">
-							<div class="row"
+						<div class="col-xs-12 col-md-offset-1 col-md-10">
 							<div class="row">
-								<div class="col-md-10" id="mapContainer">
+								<div class="col-xs-10 col-md-10" id="mapContainer">
 									
 								</div>
-								<div class="col-md-2" id="sponsorList"></div>
+								<div class="col-xs-2 col-md-2" id="sponsorList"></div>
 							</div>
 						</div>
 					</div>
@@ -283,9 +282,9 @@
 						<div class="col-md-offset-1 col-md-10 col-md-offset-1">
 							<img id="team-photo" src="images/main.jpg">
 							<div class="row team-box">
-								<div class="col-md-6 team-box1 yellow-box">
+								<a href="team.php"><div class="col-md-6 team-box1 yellow-box">
 									<h1 class="big-yellow-font">OUR TEAM</h1>
-								</div>
+								</div></a>
 								<div class="col-md-6 team-box2 yellow-box">
 									<h1 class="big-yellow-font">JOIN US!</h1>
 								</div>
@@ -297,9 +296,9 @@
 			<div class="row" id="contact">
 				<div class="col-md-offset-2 col-md-10 mainframe">
 					<div class="row">
-						<div class="col-md-offset-1 col-md-10 col-md-offset-1">
+						<div class="col-xs-12 col-md-offset-1 col-md-10 col-md-offset-1">
 							<div class="row">
-								<div class="col-md-6" id="contact-left">
+								<div class="col-xs-12 col-md-6" id="contact-left">
 									<h1>CONTACT</h1>
 									<h3>
 										You can reach us by email at:
@@ -322,18 +321,21 @@ Balhcblsadfhasldkjf;a You can reach us by email at:
 mcgill.mtsa@gmail.com
 									</h3>
 								</div>
-								<div class="col-md-6" id="contact-right">
+								<div class="col-xs-12 col-md-6" id="contact-right">
 									<div class="row" id="contact-social-media">
-										<div class="col-md-6" id="contact-facebook">
+										<div class="col-xs-6 col-md-6" id="contact-facebook">
+											<img src="images/facebook-icon.png">
+										</div>
+										<div class="col-xs-6 col-md-6" id="contact-instagram">
+											<img src="images/instagram-icon.png">
 											
 										</div>
-										<div class="col-md-6" id="contact-instagram">
+										<div class="col-xs-6 col-md-6" id="contact-youtube">
+											<img src="images/youtube-icon.png">
 											
 										</div>
-										<div class="col-md-6" id="contact-youtube">
-											
-										</div>
-										<div class="col-md-6" id="contact-twitter">
+										<div class="col-xs-6 col-md-6" id="contact-twitter">
+											<img src="images/twitter-icon.png">
 											
 										</div>
 										

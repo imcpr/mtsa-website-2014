@@ -1,15 +1,24 @@
-.house-main{
-	padding-right: 10px;
+@media (min-width: 992px) {
+		
+	.house-main{
+		padding-right: 10px;
+	}
+	#house-photo{
+		
+		margin-right: 10px;
+	}
+	#house-intro{
+		
+		margin-right:-10px;
+	}
 }
 #house-photo{
 	border: 3px solid white;
 	height:400px;
-	margin-right: 10px;
 }
 #house-intro{
 	border:3px solid white;
 	height:400px;
-	margin-right:-10px;
 }
 .house-col{
 	padding:5px !important;
@@ -36,6 +45,12 @@
 	color:white;
 	font-size:larger;
 }
+
+@media (max-width: 991px) {
+	.house-description p{
+		font-size:1.4em;
+	}
+}
 .house-name{
 	color:yellow;
 	margin:0px;
@@ -43,5 +58,4 @@
 }
 .house-description p{
 	color:white;
-	overflow:
 }

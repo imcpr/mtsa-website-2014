@@ -1,9 +1,7 @@
 #contact-left{
-	height:500px;
 	text-align:left;
 }
 #contact-right{
-	height:500px;
 }
 #contact-left h1{
 	color:#DEC024;
@@ -11,7 +9,7 @@
 	width:100%;
 	display:block;
 	margin:0px;
-	font-size:60pt;
+	font-size:3em;
     font-family: 'Lato';
     font-weight:800;
     padding:0px;
@@ -24,9 +22,8 @@
 	padding-top:20px;
 	padding-right:20px;
 }
-#contact-social-media .col-md-6{
-	border:3px solid white;
-	height:300px;
+#contact-social-media .col-md-6 img{
+	width:100%;
 }
 #contact-facebook{
 	margin-right:20px;
